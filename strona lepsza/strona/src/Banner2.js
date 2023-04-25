@@ -12,7 +12,7 @@ import {
     createIcon,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import wiązka from './starpol.jpg';
+  import laser from './background.jpg';
   
   export default function Banner() {
     return (
@@ -29,19 +29,20 @@ import {
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
               <br />
               <Text as={'span'} color={'blue.400'}>
-                Wiązki kablowe
+                Cięcie laserem
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-            Jednym z głównych obszarów działalności naszej firmy jest produkcja wiązek elektrycznych. 
-            Dostarczamy rozwiązania nie tylko standardowe, ale także wiązki kablowe specjalnego przeznaczenia.
-            Nasze Produkty z powodzeniem znajdują zastosowanie głównie w sektorze elektroniki profesjonalnej, 
-            automatyce przemysłowej, maszynach przemysłowych, przemyśle kosmicznym, motoryzacyjnym, chemicznym 
-            i farmaceutycznym. Zakres naszej produkcji obejmuje wiązki o różnej wielkości. 
-            Od najmniejszych kilku przewodowych do rozbudowanych zakończonych złączami wg wymagań klienta. 
-            Wykonujemy połączenia zaciskane jak również lutowane. Wiązki wykonujemy na podstawie schematów od 
-            klienta ale też na podstawie przekazanych gotowych wyrobów.
-            Dysponujemy stacją testową potwierdzającą poprawność wykonania każdej z wykonanych wiązek.
+
+            Oferujemy usługę cięcia laserem detali płaskich o dowolnych kształtach.
+            Posiadamy wycinarkę laserową TRUMPF Trumatic TC L3050, co umożliwia nam palenie blachy 
+            czarnej o maksymalnej grubości 25mm, blachy nierdzewnej 20mm, aluminium 12mm.
+            Maksymalny format arkusza 1500×3000 mm
+            Usługę wykonujemy, wykorzystując materiały własne jak również materiały powierzone. 
+            Wyróżnia nas indywidualne podejście do klienta. 
+            W przypadku dużych zamówień konsultujemy rysunki pod względem technologii cięcia, 
+            aby maksymalnie zminimalizować koszt i czas wykonania usługi.
+            Zapewniamy pełen profesjonalizm oraz krótkie terminy zleceń .
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
@@ -63,7 +64,7 @@ import {
                 px={6}
                 leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
                 How It Works
-              </Button> 
+              </Button>
             </Stack>
           </Stack>
           <Flex
@@ -88,14 +89,24 @@ import {
               boxShadow={'2xl'}
               width={'full'}
               overflow={'hidden'}>
-              
+              <IconButton
+                aria-label={'Play Button'}
+                variant={'ghost'}
+                _hover={{ bg: 'transparent' }}
+                size={'lg'}
+                color={'white'}
+                position={'absolute'}
+                left={'50%'}
+                top={'50%'}
+                transform={'translateX(-50%) translateY(-50%)'}
+              />
               <Image
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
                 w={'100%'}
                 h={'100%'}
-                img src={wiązka}
+                img src={laser}
               />
             </Box>
           </Flex>

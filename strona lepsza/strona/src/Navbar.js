@@ -45,13 +45,13 @@ import {
             <IconButton
               onClick={onToggle}
               icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+                isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={5} h={5} />
               }
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <Flex flex={{ base: 3 }} justify={{ base: 'center', md: 'start' }}>
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
@@ -59,7 +59,7 @@ import {
               <img src={logo} alt='logo' />
             </Text>
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex display={{ base: 'none', md: 'flex' }} ml={50}>
               <DesktopNav />
             </Flex>
           </Flex>
@@ -68,7 +68,7 @@ import {
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
-            spacing={6}>
+            spacing={4}>
             <Button
               as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
@@ -98,16 +98,17 @@ import {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={4}>
+      <Stack direction={'row'} spacing={10} >
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
-                  p={2}
+                  display={{ base: 'none', md: 'flex' }}
+                  p={10}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
+                  fontSize={'20'}
+                  fontWeight={600}
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
@@ -239,7 +240,7 @@ import {
   
   const NAV_ITEMS = [
     {
-      label: 'Inspiration',
+      label: 'Wiązki Kablowe',
       children: [
         {
           label: 'Explore Design Work',
@@ -254,7 +255,7 @@ import {
       ],
     },
     {
-      label: 'Find Work',
+      label: 'Wycinka laserowa',
       children: [
         {
           label: 'Job Board',
@@ -269,11 +270,7 @@ import {
       ],
     },
     {
-      label: 'Learn Design',
-      href: '#',
-    },
-    {
-      label: 'Hire Designers',
+      label: 'Kontakt',
       href: '#',
     },
   ];

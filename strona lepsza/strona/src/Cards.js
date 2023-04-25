@@ -4,8 +4,10 @@ import { Box, IconButton, background, useBreakpointValue } from '@chakra-ui/reac
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
-import background1 from './background.jpg';
 import cards2 from './cards2.png';
+import cards1 from './cards1.jpg';
+import cards3 from './cards3.jpg';
+import cards4 from './cards4.jpg';
 
 // Settings for the slider
 const settings = {
@@ -14,10 +16,10 @@ const settings = {
   fade: true,
   infinite: true,
   autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+  speed: 1000,
+  autoplaySpeed: 3000,
+  slidesToShow: 4,
+  slidesToScroll: 4,
 };
 
 export default function Carousel() {
@@ -32,16 +34,18 @@ export default function Carousel() {
 
   // These are the images used in the slide
   const cards = [
-    background1,
-    cards2
+    cards1,
+    cards2,
+    cards3,
+    cards4
   ];
 
   return (
     <Box
-      position={'relative'}
+      position={'center'}
       height={'1300px'}
       width={'full'}
-      padding={'100'}
+      padding={'300'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
       <link
@@ -85,9 +89,10 @@ export default function Carousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((url, index) => (
           <Box
+            width={'500px'}
             key={index}
-            height={'6xl'}
-            position="relative"
+            height={'2xl'}
+            position="center"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
