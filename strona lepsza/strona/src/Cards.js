@@ -43,7 +43,7 @@ export default function Carousel() {
   return (
     <Box
       position={'center'}
-      height={'1300px'}
+      height={'1500px'}
       width={'full'}
       padding={'300'}
       overflow={'hidden'}>

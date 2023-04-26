@@ -101,10 +101,12 @@ import {
       <Stack direction={'row'} spacing={10} >
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
+            <Popover trigger={'hover'} placement={'bottom-start'} >
               <PopoverTrigger>
                 <Link
                   display={{ base: 'none', md: 'flex' }}
+                  position={'relative'}
+                  axis ='both'
                   p={10}
                   href={navItem.href ?? '#'}
                   fontSize={'20'}
@@ -241,33 +243,11 @@ import {
   const NAV_ITEMS = [
     {
       label: 'Wiązki Kablowe',
-      children: [
-        {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
+      href: '#'
     },
     {
       label: 'Wycinka laserowa',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
+      href: '#'
     },
     {
       label: 'Kontakt',
